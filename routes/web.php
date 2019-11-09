@@ -16,3 +16,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('/', 'landing');
+
+# the pets routes
+
+Route::get('/pets', 'PetsController@index');
