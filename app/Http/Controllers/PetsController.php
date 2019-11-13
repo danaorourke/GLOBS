@@ -19,6 +19,11 @@ class PetsController extends Controller
   }
   
   public function create(Request $request) {
+    $validatedData = $request->validate([
+      'name' => 'required|max:255'
+    ]);
+  
+/*
     $pet = new Pet();
     
     $pet->name = $request->name;
@@ -33,6 +38,7 @@ class PetsController extends Controller
     
     $pet->save();
     
+*/
 /*
       $pet = new Pet();
       $pet->name = $request->slimeName;

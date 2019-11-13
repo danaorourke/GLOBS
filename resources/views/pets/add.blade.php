@@ -10,6 +10,16 @@ Adopt New Slime
         <div class="card">
           <h1 class="card-header">Adopt New Slime</h1>
           <div class="card-body">
+            
+            @if ($errors->any())
+            <div class="alert alert-danger">
+              <ul>
+                @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+                @endforeach
+              </ul>
+            </div>
+            @endif
                 
             {!! Form::open(['url' => 'pets/adopt']) !!}
                 <div class="form-group row">
