@@ -22,6 +22,7 @@ Adopt New Slime
             @endif
                 
             {!! Form::open(['url' => 'pets/adopt']) !!}
+              @csrf
                 <div class="form-group row">
                   {!! Form::label('name', 'Slime Name', ['class' => 'col-sm-2 col-form-label']) !!}
                   <div class="col-sm-10">

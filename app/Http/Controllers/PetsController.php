@@ -20,6 +20,7 @@ class PetsController extends Controller
   
   public function create(Request $request) {
     
+    // validation rules
     $validatedData = $request->validate([
       'name' => 'required|max:255',
       'health' => 'required|numeric|between:5,10',
@@ -29,7 +30,14 @@ class PetsController extends Controller
       'stamina' => 'required|numeric|between:5,10',
       'accuracy' => 'required|numeric|between:5,10'
     ]);
-  
+    
+    // check for count of stats
+    $sum = 0;
+    $sum = $validatedData['health'] + $validatedData['defense'] + $validatedData['attack'] + $validatedData['speed'] + $validatedData['stamina'] + $validatedData['accuracy'];
+    if ($sum !== 40) {
+      return back()->withInput()->withErrors(array('Stats must equal 40.'));
+//      return redirect('/pets/adopt', ['POST' => $validatedData ])->with('error', 'Stats must equal 40.');
+    }
     
   
 /*
