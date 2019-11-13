@@ -10,49 +10,50 @@ Adopt New Slime
         <div class="card">
           <h1 class="card-header">Adopt New Slime</h1>
           <div class="card-body">
-             <form method="POST">
+                
+            {!! Form::open(['url' => 'pets/adopt']) !!}
                 <div class="form-group row">
-                  <label for="slimeName" class="col-sm-2 col-form-label">Name</label>
+                  {!! Form::label('name', 'Slime Name', ['class' => 'col-sm-2 col-form-label']) !!}
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="slimeName">
+                    {!! Form::text('name', '', [ 'class' => 'form-control' ]) !!}
                   </div>
                 </div>
                 
                 <hr style="margin:40px 0;">
                 <div class="form-group row">
-                  <label for="health" class="col-sm-2 col-form-label">Health</label>
+                  {!! Form::label('health', 'Health', [ 'class' => 'col-sm-2 col-form-label' ]) !!}
                   <div class="col-sm-4">
-                    <input id="health" type="number" class="form-control stat" value="5" min="5" max="10">
+                    {!! Form::number('health', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="defense" class="col-sm-2 col-form-label">Defense</label>
+                  {!! Form::label('defense', 'Defense', [ 'class' => 'col-sm-2 col-form-label', 'min' => 5, 'max' => 10 ] ) !!}
                   <div class="col-sm-4">
-                    <input id="defense" type="number" class="form-control stat" value="5" min="5" max="10">
+                    {!! Form::number('defense', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="attack" class="col-sm-2 col-form-label">Attack</label>
+                  {!! Form::label('attack', 'Attack', [ 'class' => 'col-sm-2 col-form-label' ] ) !!}
                   <div class="col-sm-4">
-                    <input id="attack" type="number" class="form-control stat" value="5" min="5" max="10">
+                    {!! Form::number('attack', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="speed" class="col-sm-2 col-form-label">Speed</label>
+                  {!! Form::label('speed', 'Speed', [ 'class' => 'col-sm-2 col-form-label' ] ) !!}
                   <div class="col-sm-4">
-                    <input id="speed" type="number" class="form-control stat" value="5" min="5" max="10">
+                    {!! Form::number('speed', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="stamina" class="col-sm-2 col-form-label">Stamina</label>
+                  {!! Form::label('stamina', 'Stamina', [ 'class' => 'col-sm-2 col-form-label' ] ) !!}
                   <div class="col-sm-4">
-                    <input id="stamina" type="number" class="form-control stat" value="5" min="5" max="10">
+                    {!! Form::number('stamina', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="accuracy" class="col-sm-2 col-form-label">Accuracy</label>
+                  {!! Form::label('accuracy', 'Accuracy', [ 'class' => 'col-sm-2 col-form-label' ] ) !!}
                   <div class="col-sm-4">
-                    <input id="accuracy" type="number" class="form-control stat" value="5" min="5" max="10">
+                    {!! Form::number('accuracy', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
                   </div>
                 </div>
                 
@@ -70,8 +71,7 @@ Adopt New Slime
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary" id="submitPet">Adopt Pet</button>
                 </div>
-                {{ csrf_field() }}
-              </form>
+            {!! Form::close() !!}
               <pets-add></pets-add>
           </div>
         </div>
