@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Redirect;
 use App\Pet;
 
 class PetsController extends Controller
@@ -18,6 +19,21 @@ class PetsController extends Controller
   }
   
   public function create(Request $request) {
+    $pet = new Pet();
+    
+    $pet->name = $request->name;
+    $pet->user_id = Auth::id();
+    
+    $pet->health = $request->health;
+    $pet->defense = $request->defense;
+    $pet->attack = $request->attack;
+    $pet->speed = $request->speed;
+    $pet->stamina = $request->stamina;
+    $pet->accuracy = $request->accuracy;
+    
+    $pet->save();
+    
+/*
       $pet = new Pet();
       $pet->name = $request->slimeName;
       $sum = 0;
@@ -32,7 +48,7 @@ class PetsController extends Controller
         is_numeric($request->accuracy)
       ) {
         // add up the stats
-        $sum = $request->health + $request->defense + $request->attack + $request->speed + $request->stamina + $request->accuracy;
+        $sum = (int)$request->health + (int)$request->defense + (int)$request->attack + (int)$request->speed + (int)$request->stamina + (int)$request->accuracy;
         
         if ($sum == 40) {
           if ($request->health >= 5 && $request->health <= 10) { $pet->health = $request->health; }
@@ -43,15 +59,15 @@ class PetsController extends Controller
           if ($request->accuracy >= 5 && $request->accuracy <= 10) { $pet->accuracy = $request->accuracy; }
           $pet->user_id = Auth::id();
           
-          $pet->save(); 
+          $pet->save();
+          return redirect('/pets')->with('success', 'New Pet Adopted!');
+          // return to individual pet profile
         } else {
-          //return redirect('/pets/adopt');
+          return redirect('/pets/adopt');
         }
       } else {
-        //return redirect('/pets/adopt');
+        return redirect('/pets/adopt');
       }
-
-      
-    // return to individual pet profile
+*/
   }
 }
