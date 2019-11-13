@@ -19,9 +19,18 @@ class PetsController extends Controller
   }
   
   public function create(Request $request) {
+    
     $validatedData = $request->validate([
-      'name' => 'required|max:255'
+      'name' => 'required|max:255',
+      'health' => 'required|numeric|between:5,10',
+      'defense' => 'required|numeric|between:5,10',
+      'attack' => 'required|numeric|between:5,10',
+      'speed' => 'required|numeric|between:5,10',
+      'stamina' => 'required|numeric|between:5,10',
+      'accuracy' => 'required|numeric|between:5,10'
     ]);
+  
+    
   
 /*
     $pet = new Pet();
