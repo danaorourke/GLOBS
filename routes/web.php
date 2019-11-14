@@ -22,3 +22,4 @@ Route::view('/', 'landing');
 Route::get('/pets', 'PetsController@index');
 Route::get('/pets/adopt', 'PetsController@add');
 Route::post('/pets/adopt', 'PetsController@create');
+Route::get('/pets/release/{id}', 'PetsController@release');

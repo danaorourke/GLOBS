@@ -59,4 +59,19 @@ class PetsController extends Controller
     $pet->save();
   }
   
+  // delete pet
+  public function release($id) {
+    $user = Auth::user();
+    
+    $pet = Pet::findOrFail($id);
+    
+    if ($pet->user_id == $user->id) {
+      $pet->delete();
+      return redirect('/pets')->with('success', 'Pet successfully released.');
+    } else {
+      
+    }
+    
+    
+  }
 }
