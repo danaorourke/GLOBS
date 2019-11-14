@@ -2,3 +2,4 @@
 !.gitignore
 !img
 !img/*
+.DS_Store
