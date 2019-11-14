@@ -24,8 +24,8 @@ List All Pets
           
           @foreach($user->pets as $pet)
             
-            <div class="card">
-              <h3 class="card-header">{{ $pet->name }} <a href="pets/release/{{ $pet->id }}" class="button" style="float: right;" alt="Delete">X</a></h3>
+            <div class="card m-3">
+              <h3 class="card-header">{{ $pet->name }} <a href="pets/release/{{ $pet->id }}" class="btn btn-outline-secondary" style="float: right;" alt="Delete">X</a></h3>
               <div class="cardbody">
                 <ul class="list-group m-3">
                   <li class="list-group-item">
