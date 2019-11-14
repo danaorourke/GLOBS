@@ -38,9 +38,9 @@ Adopt New Slime
                   </div>
                 </div>
                 <div class="form-group row">
-                  {!! Form::label('defense', 'Defense', [ 'class' => 'col-sm-2 col-form-label', 'min' => 5, 'max' => 10 ] ) !!}
+                  {!! Form::label('stamina', 'Stamina', [ 'class' => 'col-sm-2 col-form-label' ] ) !!}
                   <div class="col-sm-4">
-                    {!! Form::number('defense', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
+                    {!! Form::number('stamina', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
                   </div>
                 </div>
                 <div class="form-group row">
@@ -50,15 +50,15 @@ Adopt New Slime
                   </div>
                 </div>
                 <div class="form-group row">
-                  {!! Form::label('speed', 'Speed', [ 'class' => 'col-sm-2 col-form-label' ] ) !!}
+                  {!! Form::label('defense', 'Defense', [ 'class' => 'col-sm-2 col-form-label', 'min' => 5, 'max' => 10 ] ) !!}
                   <div class="col-sm-4">
-                    {!! Form::number('speed', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
+                    {!! Form::number('defense', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
                   </div>
                 </div>
                 <div class="form-group row">
-                  {!! Form::label('stamina', 'Stamina', [ 'class' => 'col-sm-2 col-form-label' ] ) !!}
+                  {!! Form::label('speed', 'Speed', [ 'class' => 'col-sm-2 col-form-label' ] ) !!}
                   <div class="col-sm-4">
-                    {!! Form::number('stamina', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
+                    {!! Form::number('speed', '5', [ 'class' => 'form-control stat', 'min' => 5, 'max' => 10 ] ) !!}
                   </div>
                 </div>
                 <div class="form-group row">
