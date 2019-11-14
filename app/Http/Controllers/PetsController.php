@@ -9,15 +9,20 @@ use App\Pet;
 
 class PetsController extends Controller
 {
+  
+  // list all current user pets
   public function index() {
     $user = Auth::user();
     return view('pets/list',compact('user'));
   }
   
+  
+  // show the new pet form
   public function add() {
     return view('pets/add');
   }
   
+  // create a new pet
   public function create(Request $request) {
     
     // validation rules
