@@ -53,7 +53,7 @@ List All Pets
           @endforeach
           
           <hr class="m-3">
-          <p><a href="/pets/adopt" class="btn btn-primary">Adopt a new pet.</a></p>
+          <p><a href="/pets/adopt" class="btn btn-primary btn-block btn-lg">Adopt a new pet.</a></p>
 
           
         </div>        
