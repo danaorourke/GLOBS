@@ -57,6 +57,8 @@ class PetsController extends Controller
     $pet->accuracy = $validatedData['accuracy'];
     
     $pet->save();
+    
+    return redirect('/pets')->with('success', "$pet->name added to pets.");
   }
   
   // delete pet
@@ -69,9 +71,7 @@ class PetsController extends Controller
       $pet->delete();
       return redirect('/pets')->with('success', 'Pet successfully released.');
     } else {
-      
+      return redirect('/pets');
     }
-    
-    
   }
 }
