@@ -13,4 +13,10 @@ class ShopsController extends Controller
       $shops = Shop::all();
       return view('shops/list',compact('shops'));
     }
+    
+    // list individual shop
+    public function shop($id) {
+      $shop = Shop::findOrFail($id);
+      return view('shops/shop',compact('shop'));
+    }
 }
