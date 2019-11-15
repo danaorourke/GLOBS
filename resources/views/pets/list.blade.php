@@ -26,7 +26,7 @@ List All Pets
             
             <div class="card m-3">
               <h3 class="card-header">{{ $pet->name }} <a href="pets/release/{{ $pet->id }}" class="btn btn-outline-secondary" style="float: right;" alt="Delete">X</a></h3>
-              <div class="cardbody">
+              <div class="card-body">
                 <ul class="list-group m-3">
                   <li class="list-group-item">
                     <span>Health:</span> {{ $pet->health }}
