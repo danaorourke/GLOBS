@@ -24,4 +24,5 @@ Route::post('/pets/adopt', 'PetsController@create');
 Route::get('/pets/release/{id}', 'PetsController@release');
 
 # the shops routes
-Route::get('/shops', 'ShopsController@index');
+Route::get('/shops', 'ShopsController@index')->name('shops');
+Route::get('/shops/{id}', 'ShopsController@shop');
