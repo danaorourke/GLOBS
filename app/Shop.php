@@ -10,4 +10,8 @@ class Shop extends Model
     "name",
     "description"
   ];
+  
+  public function items() {
+    return $this->belongsToMany('App\Item');
+  }
 }
