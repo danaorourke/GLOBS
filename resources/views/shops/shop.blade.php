@@ -13,7 +13,7 @@
           <p>No products found.</p>
           @endif
 
-          @foreach ($shop->items as $item)  qw
+          @foreach ($shop->items as $item)
             <div class="card m-3">
               <h4 class="card-header">{{ $item->name }}</h4>
               <div class="card-body">
