@@ -14,7 +14,8 @@ class ShopsTableSeeder extends Seeder
       DB::table('shops')->insert(
         [
           'name' => 'Plethora Provisions',
-          'description' => 'Plethora Provisions sells all manner of foodstuffs for the discerning pet owner.'
+          'description' => 'Plethora Provisions sells all manner of foodstuffs for the discerning pet owner.',
+          'multiplier' => 1
         ]
       );
     }

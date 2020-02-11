@@ -14,7 +14,8 @@ class ItemsTableSeeder extends Seeder
       DB::table('items')->insert(
         [
           'name' => 'GeneroLabs Slime Chow',
-          'description' => 'The most generic of foodstuffs. While not fit for human consumption, it seems to fulfill the basic needs of the average slime.'
+          'description' => 'The most generic of foodstuffs. While not fit for human consumption, it seems to fulfill the basic needs of the average slime.',
+          'price' => 10.00
         ]
       );
     }
