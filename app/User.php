@@ -43,4 +43,8 @@ class User extends Authenticatable
     public function pets() {
       return $this->hasMany(Pet::class);
     }
+    
+    public function items() {
+      return $this->belongsToMany(User::class);
+    }
 }

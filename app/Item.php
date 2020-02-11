@@ -13,5 +13,9 @@ class Item extends Model
     
   public function shops() {
     return $this->belongsToMany('App\Shop');
-  }    
+  }
+  
+  public function items() {
+    return $this->belongsToMany('App\User');
+  }
 }
