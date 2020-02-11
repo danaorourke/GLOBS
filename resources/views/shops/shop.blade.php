@@ -24,7 +24,7 @@
                     <label for="{{$item->name}}" class="col-sm-2 col-form-label">Qty:</label>
                     <input type="number" min="0" id="{{$item->name}}" class="form-control col-sm-2">
                     
-                    <span id="subtotal">0.00</span> @ <span id="price">0.00</span> ea.
+                    <span id="subtotal">0.00</span> @ <span id="price">{{$item->price}}</span> ea.
                   </div>
                 </div>
               </div>
