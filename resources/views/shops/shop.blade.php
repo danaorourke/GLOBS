@@ -22,17 +22,18 @@
                   <p>{{ $item->description }}</p>
                   <div class="row">
                     <label for="{{$item->name}}" class="col-sm-2 col-form-label">Qty:</label>
-                    <input type="number" min="0" id="{{$item->name}}" class="form-control col-sm-2">
-                    
-                    <span id="subtotal">0.00</span> @ <span id="price">{{$item->price}}</span> ea.
+
+                    {!! Form::number('item_'.$item->id, '0', [ 'class' => 'form-control col-sm-2'] ) !!}
+                   
+                    <span class="col-form-label ml-4">{{$item->price}} ea.</span>
                   </div>
                 </div>
               </div>
             @endforeach
-
-
+            
+            <button type="submit" class="btn btn-primary m-3">Confirm Order</button>
+              
             {{ csrf_field() }}
-
             </form>
           @endif
       </div>
