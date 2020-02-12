@@ -19,4 +19,10 @@ class ShopsController extends Controller
       $shop = Shop::findOrFail($id);
       return view('shops/shop',compact('shop'));
     }
+    
+    // confirm order
+    public function order($id) {
+      $shop = Shop::findOrFail($id);
+      return view('shops/order',compact('shop'));
+    }
 }
