@@ -14,8 +14,8 @@ class CreateItemShop extends Migration
     public function up()
     {
         Schema::create('item_shop', function (Blueprint $table) {
-//            $table->bigIncrements('id');
-//          $table->timestamps();
+            $table->bigIncrements('id');
+            $table->timestamps();
             
             $table->bigInteger('shop_id')->unsigned();
             $table->foreign('shop_id')->references('id')->on('shops');
