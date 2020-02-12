@@ -13,7 +13,7 @@
           <p>No products found.</p>
           @else
             
-            <form method="post" actions="/shops/{{$shop->id}}/order" accept-charset="UTF-8">
+            <form method="post" action="/shops/{{$shop->id}}/order" accept-charset="UTF-8">
           
             @foreach ($shop->items as $item)
               <div class="card m-3">

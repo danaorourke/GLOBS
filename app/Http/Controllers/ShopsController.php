@@ -21,7 +21,7 @@ class ShopsController extends Controller
     }
     
     // confirm order
-    public function order($id) {
+    public function order(Request $request, $id) {
       $shop = Shop::findOrFail($id);
       return view('shops/order',compact('shop'));
     }
