@@ -7,8 +7,11 @@ Confirm Order | {{ $shop->name }}
 @section('content')
   <div class="container">
     <div class="card m-3">
-      <h1 class="card-header">Confirm Order with {{ $shop->name }}</h1>
-
+      <h1 class="card-header">Confirmed Order with {{ $shop->name }}</h1>
+      
+      @foreach ($validatedData as $data => $quantity)
+        <p>{{$quantity}} of {{$data}}</p>
+      @endforeach
     </div>
   </div>
 @endsection

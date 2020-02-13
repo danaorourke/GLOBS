@@ -23,7 +23,7 @@
                   <div class="row">
                     <label for="{{$item->name}}" class="col-sm-2 col-form-label">Qty:</label>
 
-                    {!! Form::number('item_'.$item->id, '0', [ 'class' => 'form-control col-sm-2'] ) !!}
+                    {!! Form::number($item->id, '0', [ 'class' => 'form-control col-sm-2'] ) !!}
                    
                     <span class="col-form-label ml-4">{{$item->price}} ea.</span>
                   </div>

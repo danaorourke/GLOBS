@@ -23,6 +23,14 @@ class ShopsController extends Controller
     // confirm order
     public function order(Request $request, $id) {
       $shop = Shop::findOrFail($id);
-      return view('shops/order',compact('shop'));
+      
+      $itemCount = $shop->items->count();
+      $rules = [];
+      for ($i = 0; $i <= $itemCount; $i++) {
+        $rules[$i+1] = 'numeric';
+      }
+      $validatedData = $request->validate($rules);
+      
+      return view('shops/order',compact('shop', 'validatedData'));
     }
 }
