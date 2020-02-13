@@ -18,7 +18,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::view('/', 'landing');
 
 # the pets routes
-Route::get('/pets', 'PetsController@index');
+Route::get('/pets', 'PetsController@index')->name('pets');
 Route::get('/pets/adopt', 'PetsController@add');
 Route::post('/pets/adopt', 'PetsController@create');
 Route::get('/pets/release/{id}', 'PetsController@release');
