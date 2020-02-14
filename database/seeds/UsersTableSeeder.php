@@ -9,7 +9,8 @@
         [
           'name' => "Dana O'Rourke",
           'email' => 'dana@cupofteacreations.com',
-          'password' => bcrypt('testing123')
+          'password' => bcrypt('testing123'),
+          'gold' => 5000
         ]
       );
     }  

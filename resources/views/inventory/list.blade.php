@@ -8,7 +8,8 @@
   <div class="container">
     <div class="card m-3">
       <h1 class="card-header">Inventory</h1>
-      <div class="card-body">         
+      <div class="card-body">
+            <p>{{ $user->gold }} Gold</p>
           @if ($user->items->count() === 0)  
             <p>There are no items in your inventory.</p>
           @else  
