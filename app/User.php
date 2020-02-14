@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Pet;
+use App\Item;
 
 class User extends Authenticatable
 {
@@ -45,6 +46,6 @@ class User extends Authenticatable
     }
     
     public function items() {
-      return $this->belongsToMany(User::class);
+      return $this->belongsToMany(Item::class)->withPivot('quantity');
     }
 }

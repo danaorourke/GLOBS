@@ -27,3 +27,6 @@ Route::get('/pets/release/{id}', 'PetsController@release');
 Route::get('/shops', 'ShopsController@index')->name('shops');
 Route::get('/shops/{id}', 'ShopsController@shop');
 Route::post('/shops/{id}/order', 'ShopsController@order');
+
+# inventory
+Route::get('/inventory', 'InventoryController@index')->name('inventory');
